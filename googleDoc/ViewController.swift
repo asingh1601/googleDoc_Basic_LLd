@@ -14,9 +14,9 @@ class ViewController: UIViewController {
         
         let document = Document()
         
-        document.add(TextElement(text: "Hey there"))
-        document.add(ImageElement(url: "https://example.com/image.png", caption: "Sample Image"))
-        document.add(IntegerElement(value: 42))
+        document.add(createDocumentForGoogleDoc().create(.text("Hello World")))
+        document.add(createDocumentForGoogleDoc().create(.image("example.com", "example image")))
+        document.add(createDocumentForGoogleDoc().create(.integer(4)))
         
         let printer = DocumentPrinter()
         printer.printDocument(document)
