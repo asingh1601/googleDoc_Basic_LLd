@@ -11,6 +11,7 @@ class DocumentPrinter {
     private let textPrinter = TextPrinter()
     private let imagePrinter = ImagePrinter()
     private let integerPrinter = IntegerPrinter()
+    private let doublePrinter = DoublePrinter()
     
     func printDocument(_ document: Document) {
         for element in document.elements {
@@ -28,7 +29,9 @@ class DocumentPrinter {
             
         case is IntegerElement:
             integerPrinter.printElement(element)
-            
+        
+        case is DoubleElement:
+            doublePrinter.printElement(element)
         default:
             print("Unknown element")
         }

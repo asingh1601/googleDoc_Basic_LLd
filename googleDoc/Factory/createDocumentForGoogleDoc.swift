@@ -17,6 +17,8 @@ class createDocumentForGoogleDoc : createDocument {
             return ImageElement(url: url, caption: caption)
         case .integer(let val):
             return IntegerElement(value: val)
+        case .double(let val):
+            return DoubleElement(value: val)
         }
     }
 }
