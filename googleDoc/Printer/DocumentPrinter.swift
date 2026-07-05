@@ -21,17 +21,17 @@ class DocumentPrinter {
     
     private func printElement(_ element: DocumentElement) {
         switch element {
-        case is TextElement:
-            textPrinter.printElement(element)
+        case let text as TextElement:
+            textPrinter.printElement(text)
             
-        case is ImageElement:
-            imagePrinter.printElement(element)
+        case let image as ImageElement:
+            imagePrinter.printElement(image)
             
-        case is IntegerElement:
-            integerPrinter.printElement(element)
+        case let int as IntegerElement:
+            integerPrinter.printElement(int)
         
-        case is DoubleElement:
-            doublePrinter.printElement(element)
+        case let double as DoubleElement:
+            doublePrinter.printElement(double)
         default:
             print("Unknown element")
         }
