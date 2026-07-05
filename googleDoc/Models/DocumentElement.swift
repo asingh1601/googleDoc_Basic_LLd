@@ -7,7 +7,7 @@
 
 
 
-protocol DocumentElement {}
+protocol DocumentElement:Any {}
 
 
 
