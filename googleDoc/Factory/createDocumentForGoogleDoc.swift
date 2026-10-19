@@ -19,6 +19,8 @@ class createDocumentForGoogleDoc : createDocument {
             return IntegerElement(value: val)
         case .double(let val):
             return DoubleElement(value: val)
+        case .newLine:
+            return NewLineElement()
         }
     }
 }

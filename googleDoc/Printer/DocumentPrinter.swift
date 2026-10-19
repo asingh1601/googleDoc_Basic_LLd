@@ -12,6 +12,7 @@ class DocumentPrinter {
     private let imagePrinter = ImagePrinter()
     private let integerPrinter = IntegerPrinter()
     private let doublePrinter = DoublePrinter()
+    private let newlinePrinter = NewLinePrinter()
     
     func printDocument(_ document: Document) {
         for element in document.elements {
@@ -32,6 +33,10 @@ class DocumentPrinter {
         
         case let double as DoubleElement:
             doublePrinter.printElement(double)
+        
+        case let newLine as NewLineElement:
+            newlinePrinter.printElement(newLine)
+            
         default:
             print("Unknown element")
         }

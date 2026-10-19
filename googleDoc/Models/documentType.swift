@@ -11,4 +11,5 @@ enum documentType {
     case image(String,String)
     case integer(Int)
     case double(Double)
+    case newLine
 }

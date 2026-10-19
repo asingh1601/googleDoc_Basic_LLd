@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         
         document.add(createDocumentForGoogleDoc().create(.text("Hello World")))
         document.add(createDocumentForGoogleDoc().create(.image("example.com", "example image")))
+        document.add(createDocumentForGoogleDoc().create(.newLine))
         document.add(createDocumentForGoogleDoc().create(.integer(4)))
         document.add(createDocumentForGoogleDoc().create(.double(5.99)))
         
